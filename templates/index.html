@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App - Top Headlines</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📰 News App</h1>
+            <p class="subtitle">Stay updated with the latest headlines</p>
+        </header>
+
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search for news..." />
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="categories">
+            <button class="category-btn active" data-category="general">General</button>
+            <button class="category-btn" data-category="business">Business</button>
+            <button class="category-btn" data-category="entertainment">Entertainment</button>
+            <button class="category-btn" data-category="health">Health</button>
+            <button class="category-btn" data-category="science">Science</button>
+            <button class="category-btn" data-category="sports">Sports</button>
+            <button class="category-btn" data-category="technology">Technology</button>
+        </div>
+
+        <div id="loading" class="loading">Loading...</div>
+        <div id="error" class="error"></div>
+
+        <div id="newsContainer" class="news-container"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
